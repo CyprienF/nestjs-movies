@@ -1,5 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from '../prisma/prisma.service';
+import { CreateMovieDto } from "./dto";
 
 @Injectable()
 export class MovieService {
@@ -15,6 +16,14 @@ export class MovieService {
       where: {
         id: id
       }
-    })
+    });
+  }
+
+  async createMovie(dto: CreateMovieDto) {
+    return await this.prisma.movie.create({
+      data: {
+        ...dto
+      }
+    });
   }
 }

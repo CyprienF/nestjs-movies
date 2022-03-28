@@ -18,5 +18,5 @@ model Movie {
   title           String
   runtime         Int
   overview        String
-  backgroundImage String
+  backgroundImage String?
 }
