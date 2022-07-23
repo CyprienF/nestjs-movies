@@ -12,6 +12,9 @@ export class MovieDto {
   overview: string;
 
   @IsString()
+  releaseDate: string;
+
+  @IsString()
   @IsOptional()
   backgroundImage?: string;
 }

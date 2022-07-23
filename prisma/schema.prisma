@@ -18,5 +18,6 @@ model Movie {
   title           String
   runtime         Int
   overview        String
+  releaseDate     String
   backgroundImage String?
 }
